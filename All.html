@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LankanLeeks Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .snow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://marketplace.canva.com/EAGl1OVQJNI/3/0/1280w/canva-blue-white-gradient-aesthetic-background-instagram-post--HeheXsNmyY.jpg');
+      background-size: cover;
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .description {
+      font-size: 15px;
+      color: #ffffff;
+      font-weight: 500;
+      margin: 10px 0;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .button-container {
+      margin-bottom: 20px;
+    }
+
+    .last-updated-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #ff69b4, #ff1493);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+      animation: pulse 1.5s infinite;
+      font-family: sans-serif;
+      transition: transform 0.2s ease;
+    }
+
+    .last-updated-button:hover {
+      transform: scale(1.05);
+    }
+
+    .last-updated-button i {
+      margin-right: 8px;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; }
+      50% { box-shadow: 0 0 20px #ff1493, 0 0 30px #ff69b4; }
+      100% { box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .number-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 30px 0;
+    }
+
+    .number-box {
+      background: linear-gradient(45deg, #07689F, #A3D2CA);
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00f;
+      transition: transform 0.2s;
+      text-decoration: none;
+    }
+
+    .number-box:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    #moreNumbers {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .see-more-btn, .hide-btn {
+      margin: 10px;
+      background: #0ff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .see-more-btn:hover, .hide-btn:hover {
+      background: #00f;
+      color: white;
+    }
+
+    .bottom-menu {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      z-index: 3;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    .bottom-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+      to { text-shadow: 0 0 20px #00f, 0 0 30px #00f; }
+    }
+
+    .social-share {
+      margin-top: 30px;
+    }
+
+    .social-share a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .social-share a:hover {
+      color: #0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="snow"></div>
+  <div class="content">
+    <div class="description">අවසාන UPDATED පිටුවට පහල බටන් එක හරහා යන්න...</div>
+    <div class="button-container">
+      <a href="25.html" class="last-updated-button" title="අවසන් වරට යාවත්කාලීන වීම">
+        <i class="fas fa-clock"></i> Last updated
+      </a>
+    </div>
+
+    <div class="description">ඔයලාගෙම ලේසියට පහත පිටු සියල්ලටම මෙතනින් යන්න පුළුවන්..</div>
+<a href="index.html" class="transparent-iceblue-button">Home Page</a>
+
+<style>
+  .transparent-iceblue-button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #00efff;
+    background: transparent;
+    border: 2px solid #00efff;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow:
+      0 0 10px #00efff,
+      0 0 20px #00efff inset;
+    transition: box-shadow 0.3s ease, transform 0.2s ease, background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .transparent-iceblue-button:hover {
+    background-color: rgba(0, 239, 255, 0.2);
+    box-shadow:
+      0 0 20px #00efff,
+      0 0 40px #00efff inset;
+    transform: scale(1.05);
+  }
+</style>
+    <div class="number-container">
+      <a href="1.html" class="number-box">1</a>
+<a href="2.html" class="number-box">2</a>
+<a href="3.html" class="number-box">3</a>
+<a href="4.html" class="number-box">4</a>
+<a href="5.html" class="number-box">5</a>
+<a href="6.html" class="number-box">6</a>
+<a href="7.html" class="number-box">7</a>
+<a href="8.html" class="number-box">8</a>
+<a href="9.html" class="number-box">9</a>
+<a href="10.html" class="number-box">10</a>
+<a href="11.html" class="number-box">11</a>
+<a href="12.html" class="number-box">12</a>
+<a href="13.html" class="number-box">13</a>
+<a href="14.html" class="number-box">14</a>
+<a href="15.html" class="number-box">15</a>
+<a href="16.html" class="number-box">16</a>
+<a href="17.html" class="number-box">17</a>
+<a href="18.html" class="number-box">18</a>
+<a href="19.html" class="number-box">19</a>
+<a href="20.html" class="number-box">20</a>
+    </div>
+
+    <div id="moreNumbers" class="number-container">
+<a href="21.html" class="number-box">21</a>
+<a href="22.html" class="number-box">22</a>
+<a href="23.html" class="number-box">23</a>
+<a href="24.html" class="number-box">24</a>
+<a href="25.html" class="number-box">25</a>
+<a href="26.html" class="number-box">26</a>
+<a href="27.html" class="number-box">27</a>
+<a href="28.html" class="number-box">28</a>
+<a href="29.html" class="number-box">29</a>
+<a href="30.html" class="number-box">30</a>
+<a href="31.html" class="number-box">31</a>
+<a href="32.html" class="number-box">32</a>
+<a href="33.html" class="number-box">33</a>
+<a href="34.html" class="number-box">34</a>
+<a href="35.html" class="number-box">35</a>
+<a href="36.html" class="number-box">36</a>
+<a href="37.html" class="number-box">37</a>
+<a href="38.html" class="number-box">38</a>
+<a href="39.html" class="number-box">39</a>
+<a href="40.html" class="number-box">40</a>
+      
+      
+      
+    </div>
+
+    
+    
+    
+    <button class="see-more-btn" onclick="document.getElementById('moreNumbers').style.display='flex'; this.style.display='none'; document.getElementById('hideBtn').style.display='inline-block';">තවත් බලන්න</button>
+    <button class="hide-btn" id="hideBtn" style="display:none;" onclick="document.getElementById('moreNumbers').style.display='none'; this.style.display='none'; document.querySelector('.see-more-btn').style.display='inline-block';">සගවන්න</button>
+
+    
+    
+    
+    
+    <div class="social-share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://lankanleeks.netlify.app/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/intent/tweet?url=https://lankanleeks.netlify.app/" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/?text=https://lankanleeks.netlify.app/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/share/url?url=https://lankanleeks.netlify.app/" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="mailto:?subject=Check this out&body=https://lankanleeks.netlify.app/" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+
+ 
+  </div>
+</body>
+</html>

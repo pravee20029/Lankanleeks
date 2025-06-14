@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LankanLeeks</title>
+
+<!-- Icons & Font -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* =========== VARIABLES =========== */
+:root{
+  --bg:#0f0f0f;--card:#1b1b1b;--accent:#1e90ff;--hot:#ff4081;--gold:#ffd700;
+  --radius:10px;--text:#eee;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',Arial,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+
+/* =========== SIDEBAR =========== */
+.sidebar{
+  position:fixed;top:0;left:-250px;width:220px;height:100vh;
+  padding:70px 18px;background:linear-gradient(180deg,#111,#222);
+  transition:.35s ease;box-shadow:4px 0 20px #0008;z-index:1000;
+}
+.sidebar.active{left:0}
+.sidebar ul{list-style:none}
+.sidebar li+li{margin-top:22px}
+.sidebar a{display:flex;align-items:center;gap:12px;color:#ccc;
+  text-decoration:none;font-size:16px;transition:.3s}
+.sidebar a i{width:20px;text-align:center}
+.sidebar a:hover{color:var(--accent);transform:translateX(6px)}
+
+/* =========== HAMBURGER =========== */
+.menu-icon{
+  position:fixed;top:18px;left:18px;width:32px;cursor:pointer;
+  display:flex;flex-direction:column;gap:6px;z-index:1100;
+}
+.menu-icon span{height:3px;width:100%;background:#fff;border-radius:2px;transition:.4s}
+.menu-icon.active span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.menu-icon.active span:nth-child(2){opacity:0}
+.menu-icon.active span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+
+/* =========== OVERLAY =========== */
+.overlay{position:fixed;inset:0;background:#000a;display:none;z-index:900}
+.overlay.active{display:block;backdrop-filter:blur(2px)}
+
+/* =========== HEADER =========== */
+header{
+  text-align:center;padding:50px 10px 30px;
+  background:radial-gradient(circle at top,#1a1a2e 0%,#0e2a59 70%);
+}
+header img{width:105px;filter:drop-shadow(0 0 6px var(--gold))}
+h1{font-size:2.3rem;color:var(--gold);text-shadow:0 0 12px var(--gold)}
+.welcome{font-size:1.6rem;margin-top:10px;text-shadow:0 0 8px #fff9}
+
+/* =========== NAV BUTTONS =========== */
+nav ul{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:25px}
+nav a{
+  display:inline-block;padding:7px 16px;border-radius:var(--radius);
+  font-weight:500;text-decoration:none;color:#fff;transition:.3s;
+}
+nav a.video{background:linear-gradient(45deg,var(--hot),#ff6ea2)}
+nav a.movies{background:linear-gradient(45deg,#4caf50,#8bc34a)}
+nav a.photos{background:linear-gradient(45deg,#ff9800,#ffc107)}
+nav a:not(.video):not(.movies):not(.photos){
+  background:linear-gradient(45deg,var(--accent),#00c6ff)}
+nav a:hover{transform:translateY(-3px)}
+
+/* =========== INFO TEXT =========== */
+nav p{max-width:720px;margin:22px auto 0;line-height:1.5;opacity:.85}
+nav small{display:block;margin-top:10px}
+
+/* =========== EMOJI BOX =========== */
+.emoji-box{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(55px,1fr));
+  gap:20px;max-width:480px;margin:36px auto;background:var(--card);
+  padding:22px;border-radius:var(--radius);box-shadow:0 0 14px #0007;
+}
+.emoji{font-size:2rem;cursor:pointer;transition:.3s}
+.emoji:hover{transform:scale(1.25) rotate(5deg)}
+.floating-emoji{
+  position:absolute;font-size:2.3rem;opacity:.9;
+  animation:floatUp 4s linear forwards;pointer-events:none;z-index:600;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0) scale(1)}
+  100%{transform:translateY(-100vh) scale(1.5);opacity:0}
+}
+
+/* =========== FOOTER =========== */
+footer{
+  text-align:center;background:#101010;padding:12px;margin-top:46px;
+  font-size:.9rem;letter-spacing:.3px
+}
+
+/* =========== RESPONSIVE =========== */
+@media(max-width:600px){
+  h1{font-size:1.9rem}.welcome{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HAMBURGER ===== -->
+<div class="menu-icon" id="menu-icon">
+  <span></span><span></span><span></span>
+</div>
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar" id="sidebar">
+  <ul>
+    <li><a href="#"><i class="fas fa-home"></i>මුල් පිටුව</a></li>
+    <li><a href="All.html"><i class="fas fa-layer-group"></i>විඩියො</a></li>
+    <li><a href="M1.html"><i class="fas fa-book"></i>+18 මූවීස්</a></li>
+    <li><a href="Help.html"><i class="fas fa-star"></i>හෙල්ප්</a></li>
+    <li><a href="wela.html"><i class="fas fa-info-circle"></i>වැල කතා</a></li>
+    <li><a href="contact.html"><i class="fas fa-envelope"></i>සම්බන්ධ වෙන්න</a></li>
+  </ul>
+</aside>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <img src="https://i.ibb.co/k6GN0WRf/praveen.png" alt="praveen">
+  <h1>LANKANLEEKS</h1>
+  <div class="welcome">🌸ආයුබෝවන්!🌸</div>
+
+  <nav>
+    <ul>
+      <li><a href="Help.html">Help</a></li>
+      <li><a href="All.html" class="video">Video</a></li>
+      <li><a href="M1.html" class="movies">Movies</a></li>
+      <li><a href="wela.html" class="photos">Novels®</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>☘️𝐋𝐚𝐧𝐤𝐚𝐧𝐋𝐞𝐞𝐤𝐬 𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥 𝐍𝐞𝐰 𝐦𝐨𝐯𝐢𝐞𝐬 & 𝐯𝐢𝐝𝐞𝐨𝐬.☘️<br>
+       🍓𝐒𝐫𝐢𝐥𝐚𝐧𝐤𝐚𝐧 𝐦𝐨𝐯𝐢𝐞𝐬 අnd 𝐜𝐥𝐢𝐩𝐬 – Subscribe and enjoy!🍓</p>
+    <small>Last updated 2025-05-13</small>
+  </nav>
+</header>
+
+
+  
+
+<!-- ===== FOOTER ===== -->
+<footer><p>&copy; 2025 LankanLeeks. All rights reserved.</p></footer>
+
+<script>
+/* --- Sidebar Toggle --- */
+const menu=document.getElementById('menu-icon'),
+      side=document.getElementById('sidebar'),
+      ov=document.getElementById('overlay');
+menu.onclick=()=>{menu.classList.toggle('active');side.classList.toggle('active');ov.classList.toggle('active');};
+ov.onclick=()=>{menu.classList.remove('active');side.classList.remove('active');ov.classList.remove('active');};
+
+/* --- Emoji Magic --- */
+document.querySelectorAll('.emoji').forEach(em=>{
+  em.addEventListener('click',()=>{const sym=em.textContent;
+    const iv=setInterval(()=>{
+      const f=document.createElement('div');
+      f.className='floating-emoji';f.textContent=sym;
+      f.style.left=Math.random()*90+'vw';f.style.top=Math.random()*90+'vh';
+      document.body.appendChild(f);setTimeout(()=>f.remove(),4000);
+    },120);setTimeout(()=>clearInterval(iv),4500);
+  });
+});
+</script>
+</body>
+</html>

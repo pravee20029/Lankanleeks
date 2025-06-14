@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+  <title>LankanLeeks - Video</title>
+  <style>
+    body {
+      background-color: #0f363b;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-image: url('jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 30px 10px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+
+    h1 {
+      color: #ffcc00;
+      margin: 5px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+      animation: rainbow-glow 2s infinite alternate;
+    }
+
+    nav ul li:nth-child(1) a {
+      background-color: #d00000;
+    }
+
+    nav ul li:nth-child(2) a {
+      background-color: #0047ab;
+    }
+
+    nav ul li:nth-child(3) a {
+      background-color: #007f00;
+    }
+
+    @keyframes rainbow-glow {
+      0% { transform: scale(1); box-shadow: 0 0 10px #fff; }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px #ff0; }
+      100% { transform: scale(1); box-shadow: 0 0 10px #fff; }
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .nav-buttons a {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      animation: glow-btn 1.5s infinite alternate;
+      background-color: #ffd700;
+      color: #000;
+      box-shadow: 0 0 15px #fff85b;
+    }
+
+    @keyframes glow-btn {
+      0% { box-shadow: 0 0 5px #fff85b, 0 0 10px #ffea00; }
+      50% { box-shadow: 0 0 20px #fff94d, 0 0 30px #fff200; }
+      100% { box-shadow: 0 0 5px #fff85b, 0 0 10px #ffea00; }
+    }
+
+    .movie-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 60px 15px 15px 15px;
+      justify-content: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .movie {
+      background-color: #222;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* glow */
+    }
+
+    .movie:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.6); /* stronger glow on hover */
+    }
+
+    .movie img {
+      width: 100%;
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .watch-btn {
+      display: block;
+      margin: 8px auto;
+      padding: 8px 12px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+      animation: pink-glow 1.5s infinite alternate;
+      z-index: 2;
+      position: relative;
+    }
+
+    .watch-btn:hover {
+      background-color: #ff1493;
+    }
+
+    @keyframes pink-glow {
+      0% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.7); }
+      50% { box-shadow: 0 0 20px rgba(255, 105, 180, 1); }
+      100% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.7); }
+    }
+
+    footer {
+      text-align: center;
+      background-color: #1f1f1f;
+      padding: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.ibb.co/Bwnnrbc/071632863.png" alt="Logo" class="logo" />
+    <h1>LankanLeeks</h1>
+    <p>Watch බටන් එක ටච් කලවිට popup ඇඩ් එකක් ඔපන් වෙයි...
+    <br>තප්පර 10ක් ඒ මත සිට Back වන්න...</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="All.html">Video</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-buttons">
+      <a href="16.html" class="prev-btn">Prev</a>
+      <a href="14.html" class="next-btn">Next</a>
+    </div>
+  </header>
+
+  
+  <section class="movie-container">
+  <div class="movie">
+               <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/My3DP10Q/Screenshot-20250508-200501.jpg" alt="Screenshot-20250508-200501" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/egBCFTiZ#29T2RQCJ7pSkeFf7Tp0oeXxstweBOdQajuwhDXft-G4">Watch Now</button>
+  </div>
+  <div class="movie">
+                 <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/kVDFnTWX/Screenshot-20250508-200437.jpg" alt="Screenshot-20250508-200437" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/m4YE3CTQ#JqQkEyi9ZWoftJZ47AE2vfn6vODCsSEokY1kWfxVCR4">Watch Now</button>
+  </div>
+  <div class="movie">
+                    <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/M5SztfdB/Screenshot-20250508-200423.jpg" alt="Screenshot-20250508-200423" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/f0wQTLCY#cdVbl5_j2eWpkwOF8sclfDFdZltIzGv2vSp96wkM8JE">Watch Now</button>
+  </div>
+</section>
+
+  <section class="movie-container">
+  <div class="movie">
+               <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/7JchHX59/Screenshot-20250508-200419.jpg" alt="Screenshot-20250508-200419" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/TlpVFRjD#434i6eE5xrrHomMxJOCUQEOXkshMvfIjmMuqZ4gyTd4">Watch Now</button>
+  </div>
+  <div class="movie">
+                 <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/bM7GDQnD/Screenshot-20250508-200415.jpg" alt="Screenshot-20250508-200415" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/rxhDBBJR#27vd8AzC0dPYKmWEt6JWQ_JdrR_VbjBkMYCO05eCI5w">Watch Now</button>
+  </div>
+  <div class="movie">
+                    <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/8L99LLN3/Screenshot-20250508-200412.jpg" alt="Screenshot-20250508-200412" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/WoQGUQzD#lr3EBjeM0-rCFm7pLZqrc2D4vVcyo8qyErwDqs8pLfA">Watch Now</button>
+  </div>
+</section>
+
+  
+  <section class="movie-container">
+  <div class="movie">
+               <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/hJXSQbv3/Screenshot-20250508-200408.jpg" alt="Screenshot-20250508-200408" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/64gRWKrb#t5VyIFO2imrgVHimaQpkIk2bj_GBjnT3UDIQwT5oliY">Watch Now</button>
+  </div>
+  <div class="movie">
+                 <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/HpLkPhmm/Screenshot-20250508-200356.jpg" alt="Screenshot-20250508-200356" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/fhAXiDCY#AICfO0vPaO3Sf6_JBb0QJCf5Y7jRNGwFUjRxdukSAMY">Watch Now</button>
+  </div>
+  <div class="movie">
+                    <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/d0wg3m4z/Screenshot-20250508-200351.jpg" alt="Screenshot-20250508-200351" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/v9ZliYIA#XkQ6LVkzs-sJM4DIPqFcaHDg3R5-DH1OI4Rnlxw2Ohk">Watch Now</button>
+  </div>
+</section>
+
+  
+  <section class="movie-container">
+  <div class="movie">
+               <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/q3XQLDvD/Screenshot-20250508-200348.jpg" alt="Screenshot-20250508-200348" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/TlhHHZpJ#J3U84qjkBACIC_loY-gzhcoxuISQYPx7dz599CZGyfM">Watch Now</button>
+  </div>
+  <div class="movie">
+                 <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/kVSmTZ3y/Screenshot-20250508-200330.jpg" alt="Screenshot-20250508-200330" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/jlwDSZzB#bjPTLRYcVQ3iT7p3QjXrVLRQh6FzsjPFytuLnoCzjlE">Watch Now</button>
+  </div>
+  <div class="movie">
+                    <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/k2kVXbmw/Screenshot-20250508-200326.jpg" alt="Screenshot-20250508-200326" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/6t5AHSTS#GMTisSMyweqVY1UdPhEwzi_21UEL0PLFBM1j38Bw9Iw">Watch Now</button>
+  </div>
+</section>
+
+  <section class="movie-container">
+  <div class="movie">
+               <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/8gYVTLLN/Screenshot-20250508-200314.jpg" alt="Screenshot-20250508-200314" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/P9ABmJib#Nvaamgc2VuHrhu5Aaf7A-s57OWOcL3FZqVKJU7wLOPc">Watch Now</button>
+  </div>
+  <div class="movie">
+                 <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/XxFQz6V7/Screenshot-20250508-200311.jpg" alt="Screenshot-20250508-200311" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/6xIXUAYA#tJqQltGh7O-WOpPmPJ0H_xcFImc_2d2X_U1AnOlGlgk">Watch Now</button>
+  </div>
+  <div class="movie">
+                    <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/NddShkyH/Screenshot-20250508-200306.jpg" alt="Screenshot-20250508-200306" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/LlZw0QKL#hFzR1qKb2_UEPbj3FE0yCrpU9rUfbT-bvPbLkpmZg8s">Watch Now</button>
+  </div>
+</section>
+
+  <section class="movie-container">
+  <div class="movie">
+               <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/35MkV3PB/Screenshot-20250508-200301.jpg" alt="Screenshot-20250508-200301" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/jlISCb5B#mUuid7-q7amm4glSog5nSawRlnz10MdAhwgTiF9QJPk">Watch Now</button>
+  </div>
+  <div class="movie">
+                 <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/JMyMyvP/Screenshot-20250508-200241.jpg" alt="Screenshot-20250508-200241" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/2thAhRYL#UhYaSvAGSvIzFmo4OyfA9s6vKLPxqFBqbp7QE7wLEPg">Watch Now</button>
+  </div>
+  <div class="movie">
+                    <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/6RTMgkPG/Screenshot-20250508-200237.jpg" alt="Screenshot-20250508-200237" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/K4gVRByK#voal2iIPEfE8AryeROaWF9ZtyQJ9W3K4FZflGtXu8Lo">Watch Now</button>
+  </div>
+</section>
+
+  <section class="movie-container">
+  <div class="movie">
+               <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/pB7CGSNv/Screenshot-20250508-200234.jpg" alt="Screenshot-20250508-200234" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/v8IASRxB#0HRJSsjWdYSGsFYghZv8W9MkWZ7eUUriIBZHZtItd8w">Watch Now</button>
+  </div>
+  <div class="movie">
+                 <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/Y75GThdZ/Screenshot-20250508-200230.jpg" alt="Screenshot-20250508-200230" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/Kkpg1ArZ#0DZ_5khwf5zSjZUPCjiQviqNkJp2DVuGX5aIyCaVSyY">Watch Now</button>
+  </div>
+  <div class="movie">
+                    <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/Q7Hw7BGV/Screenshot-20250508-200226.jpg" alt="Screenshot-20250508-200226" border="0" /></a>
+    <h3 style="z-index:2; position:relative;">Free-Download</h3>
+    <button class="watch-btn" data-second-link="https://mega.nz/file/SkIVVSAQ#wAsAxg9ooiFQ0gDk1Mf-Hkfnl6BJ4pDlfSUXZUBZwCI">Watch Now</button>
+  </div>
+</section>
+
+  
+  <!-- Movie Cards -->
+  <section class="movie-container">
+    <div class="movie">
+      <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/6RLW3x71/Screenshot-20250508-200223.jpg" alt="Screenshot-20250508-200223" border="0" /></a>
+      <h3 style="z-index:2; position:relative;">Free-Download</h3>
+      <button class="watch-btn" data-second-link="https://mega.nz/file/X8h1lCzK#xkFdtxNRm9hbnyIifKdRNkVSYYo7bA-S7CFLLtakgy0">Watch Now</button>
+    </div>
+    <div class="movie">
+      <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/R44DKSJP/Screenshot-20250509-132004.jpg" alt="Screenshot-20250509-132004" border="0" /></a>
+      <h3 style="z-index:2; position:relative;">Free-Download</h3>
+      <button class="watch-btn" data-second-link="https://mega.nz/file/exYCnDLK#mCyVDafp907maZmw1E2pIvNuCOAj6sbJk2OKox6xBow">Watch Now</button>
+    </div>
+    <div class="movie">
+      <a href="https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c"><img src="https://i.ibb.co/Z6FJXqY0/Screenshot-20250509-131937.jpg" alt="Screenshot-20250509-131937" border="0" /></a>
+      <h3 style="z-index:2; position:relative;">Free-Download</h3>
+      <button class="watch-btn" data-second-link="https://mega.nz/file/zp51xaQK#7HbEoRW_l5WxKIZZP0wdj-xFq60BnCGP7w71jGy1Y-s">Watch Now</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LankanLeeks. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".watch-btn").forEach(button => {
+      button.addEventListener("click", function () {
+        const firstLink = "https://www.profitableratecpm.com/rxaxz5m2r3?key=3e0bd7c24cb2c394fa009c64e64ad227";
+        const secondLink = this.getAttribute("data-second-link");
+        window.location.href = firstLink;
+        setTimeout(() => {
+          window.location.href = secondLink;
+        }, 10000);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+  <title>LankanLeeks - Video</title>
+  <style>
+    body {
+      background-color: #0f363b;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-image: url('jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 30px 10px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+
+    h1 {
+      color: #ffcc00;
+      margin: 5px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+      animation: rainbow-glow 2s infinite alternate;
+    }
+
+    nav ul li:nth-child(1) a {
+      background-color: #d00000;
+    }
+
+    nav ul li:nth-child(2) a {
+      background-color: #0047ab;
+    }
+
+    nav ul li:nth-child(3) a {
+      background-color: #007f00;
+    }
+
+    @keyframes rainbow-glow {
+      0% { transform: scale(1); box-shadow: 0 0 10px #fff; }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px #ff0; }
+      100% { transform: scale(1); box-shadow: 0 0 10px #fff; }
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .nav-buttons a {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      animation: glow-btn 1.5s infinite alternate;
+      background-color: #ffd700;
+      color: #000;
+      box-shadow: 0 0 15px #fff85b;
+    }
+
+    @keyframes glow-btn {
+      0% { box-shadow: 0 0 5px #fff85b, 0 0 10px #ffea00; }
+      50% { box-shadow: 0 0 20px #fff94d, 0 0 30px #fff200; }
+      100% { box-shadow: 0 0 5px #fff85b, 0 0 10px #ffea00; }
+    }
+
+    .movie-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 60px 15px 15px 15px;
+      justify-content: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .movie {
+      background-color: #222;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* glow */
+    }
+
+    .movie:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.6); /* stronger glow on hover */
+    }
+
+    .movie img {
+      width: 100%;
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .watch-btn {
+      display: block;
+      margin: 8px auto;
+      padding: 8px 12px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+      animation: pink-glow 1.5s infinite alternate;
+      z-index: 2;
+      position: relative;
+    }
+
+    .watch-btn:hover {
+      background-color: #ff1493;
+    }
+
+    @keyframes pink-glow {
+      0% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.7); }
+      50% { box-shadow: 0 0 20px rgba(255, 105, 180, 1); }
+      100% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.7); }
+    }
+
+    footer {
+      text-align: center;
+      background-color: #1f1f1f;
+      padding: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.ibb.co/Bwnnrbc/071632863.png" alt="Logo" class="logo" />
+    <h1>LankanLeeks</h1>
+    <p>Watch බටන් එක ටච් කලවිට popup ඇඩ් එකක් ඔපන් වෙයි...
+    <br>තප්පර 10ක් ඒ මත සිට Back වන්න...</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="All.html">Video</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-buttons">
+      <a href="5.html" class="prev-btn">Prev</a>
+      <a href="3.html" class="next-btn">Next</a>
+    </div>
+  </header>
+
+       <!-- Movie Section (3x3 Grid Layout) -->
+    <section class="movie-container">
+        <div class="movie">
+          <img src="https://i.ibb.co/W4GykdmR/Screenshot-20250411-081202.jpg" alt="Screenshot-20250411-081202" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/61ZWnLgS#oXxqN9XqOtLiRaXDo0DajUP_HlQ0wmu2O9M8B0SauDA">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/6RdmR4yd/Screenshot-20250411-081130.jpg" alt="Screenshot-20250411-081130" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/qhZGzJSK#AM66oYrU3tlXRNY1RqFVveu80DmRrMdfXD_bQdbIG78">Watch Now</button>
+        </div>
+
+        <div class="movie">
+         <img src="https://i.ibb.co/b57fFFhJ/Screenshot-20250411-081119.jpg" alt="Screenshot-20250411-081119" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/j8w2yYzD#pVBzIBACE6iXUKOwcPyNyThMFsFnUNmf5krPPfyOyiQ">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/hRZpJfxX/Screenshot-20250411-081114.jpg" alt="Screenshot-20250411-081114" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/zww2CRBa#mTZH2QljQpcmjVNZqw1XMfTxdpSAcKTWYIFQTT_T-KM">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/53KD1bV/Screenshot-20250411-081046.jpg" alt="Screenshot-20250411-081046" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/LpwjHI7L#Wx7uQ74YdxfqS5ZrSkLgnFp07VA-d1k1aZIkgW2XgZc">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/Lz8npJcg/Screenshot-20250411-081035.jpg" alt="Screenshot-20250411-081035" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/7p4FyIQR#AtiypOfRkuo7wXWl4AnxxyLQfasiCouM_THdrsMil9g">Watch Now</button>
+        </div>
+
+    </section>
+    <!-- Movie Section (3x3 Grid Layout) -->
+    <section class="movie-container">
+        <div class="movie">
+          <img src="https://i.ibb.co/hJzmpjtf/Screenshot-20250411-081032.jpg" alt="Screenshot-20250411-081032" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/X0ZCBSiS#Lkvjgu7QTNYOxUrzQ9apPUvNqKundX6OWDcz6o01Uv8">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/m57L2h1R/Screenshot-20250411-081028.jpg" alt="Screenshot-20250411-081028" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/a9hADBKQ#IgY7KZKxn0HaF0WnC3-zV3bgTnUo54dQPoPei_A_BC8">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/1fYvCsZd/Screenshot-20250411-081024.jpg" alt="Screenshot-20250411-081024" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/jpYmhBgJ#9bBW65hPB8P_UEGy1s0zyzABh8ds9AlPyQ0gJ6Ou8gQ">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/N58vVJ3/Screenshot-20250411-081021.jpg" alt="Screenshot-20250411-081021" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/D5IgiTDZ#9HbvpElcVCmR0EoIk49IeQ9GnEqVV4shpNliphlf_t8">Watch Now</button>
+        </div>
+
+        <div class="movie">
+         <img src="https://i.ibb.co/qYVbT61k/Screenshot-20250411-081012.jpg" alt="Screenshot-20250411-081012" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/ioRQkJYJ#pvchpBiiu3dSx7t7YyPT043vIOMnG4LmX5CHM_bFJCo">Watch Now</button>
+        </div>
+
+        <div class="movie">
+         <img src="https://i.ibb.co/6zwJgfM/Screenshot-20250411-080952.jpg" alt="Screenshot-20250411-080952" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/qpxQhCzR#ad_rXUlKNEYcrv6tSRanSSipnqHFvOgJdD-4pkwJifQ">Watch Now</button>
+        </div>
+
+    </section>
+
+      <!-- Movie Section (3x3 Grid Layout) -->
+    <section class="movie-container">
+        <div class="movie">
+         <img src="https://i.ibb.co/1YSt99bf/IMG-20250410-044555-204.jpg" alt="IMG-20250410-044555-204" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/q8ZETSLC#mGuNksDiA-pWCZnU613pjL-WKgD8aM3csAm9LzXYat0">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/RG6xW1nc/Screenshot-20250411-080844.jpg" alt="Screenshot-20250411-080844" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/L4RmWBLJ#tJZwUj6CWt2PoqZfYtaaHDPwxTnnMtYMFkpkC3wCTxQ">Watch Now</button>
+        </div>
+
+        <div class="movie">
+         <img src="https://i.ibb.co/XxtBp2Lj/Screenshot-20250411-084110.jpg" alt="Screenshot-20250411-084110" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/a0pEjB6L#S3_QIS9Mh2wR8fE8wvKxdf4aOB7L-M2IZkYrA-35i6o">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/mC48CHjk/Screenshot-20250411-084131.jpg" alt="Screenshot-20250411-084131" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/rhB0nBAD#1gRLWPZpcfNndaRsmIX45N-AzVfkmxXl1Nq6WChiCus">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/MxQHybPB/Screenshot-20250411-084135.jpg" alt="Screenshot-20250411-084135" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/WwZUSS7Q#vFAWi7uCrx24mgojIaOKp8bvGlqsEGs29SD2sRLmi-M">Watch Now</button>
+        </div>
+
+        <div class="movie">
+         <img src="https://i.ibb.co/399gw0XZ/Screenshot-20250411-084535.jpg" alt="Screenshot-20250411-084535" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/DhIllSDA#DUiZXzu131iiCQvcJWa7zSmtQ3SiGz6TRELn-UiagI8">Watch Now</button>
+        </div>
+
+    </section>
+    <!-- Movie Section (3x3 Grid Layout) -->
+    <section class="movie-container">
+        <div class="movie">
+          <img src="https://i.ibb.co/GfWTbcGS/Screenshot-20250411-084531.jpg" alt="Screenshot-20250411-084531" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/K1RBwawT#Hp9FEc5-zbB5eTK9cAlA3OsuCr5VYhVhTm6V7CaIA6M">Watch Now</button>
+        ⋆.˚🦋༘⋆ 𓃰 ִֶָ𓂃 ࣪˖ ִֶָ🐇་༘࿐ ⋆.˚🦋༘⋆ 𓃰
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/6CSm8qk/Screenshot-20250411-084524.jpg" alt="Screenshot-20250411-084524" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/C4YFCQCa#yHHlPHGjaT1FMhbAxwJL1NH6tuvL79w8abjSxbYYQnU">video 01</button>
+                   <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/S8ogQbyT#K6byBzBH9owesrskD-SNkeJ_-z7xdpiYzX5UhDqC7AA">video 02</button>
+             <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/PlJz1JgJ#VoMd7KY4ews2LH5BSJu5PQKZI0kL14mWnoL6rHXi9Rw">video 03</button>
+      
+        </div>
+
+        <div class="movie">
+         <img src="https://i.ibb.co/gF4cW8GL/Screenshot-20250411-084510.jpg" alt="Screenshot-20250411-084510" border="0"></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/CkYHyYRA#dXgL3TIadncdBrWNMuqJAxNefbQTtkUBHqV5xfV6w8g">Watch Now</button>
+⋆.˚🦋༘⋆ 𓃰 ִֶָ𓂃 ࣪˖ ִֶָ🐇་༘࿐ ⋆.˚🦋༘⋆ 𓃰
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/nNDSfPLd/Screenshot-20250411-084430.jpg" alt="Screenshot-20250411-084430" border="0" /></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/P4BQibCI#hCBk65kO9iQzMt_cKl9OlwjeCMQSSsbz1VCXx3jVZx4">Watch Now</button>
+        </div>
+
+        <div class="movie">
+          <img src="https://i.ibb.co/bRMND5vB/Screenshot-20250411-084435.jpg" alt="Screenshot-20250411-084435" border="0" /></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/H8ZAEIoQ#2jo_Z-ciYGBbkH2xelG6lxfCWsVcnXzrDDZDAjwkyyQ">Watch Now</button>
+        </div>
+
+        <div class="movie">
+       <img src="https://i.ibb.co/SDChv15C/Screenshot-20250411-084450.jpg" alt="Screenshot-20250411-084450" border="0" /></a>
+            <h3>Free-Download</h3>
+            <button class="watch-btn" data-first-link="https://www.effectiveratecpm.com/yd60dqsj?key=a0768cd47876bd5f24e372f0cdca58cf" data-second-link="https://mega.nz/file/mopSSLIJ#I6Bx0hQHqk0b_Sg4mxE_v1H7Ru2iSQ8DRhUuZ0CXrfY">Watch Now</button>
+        </div>
+
+    </section>
+
+  <footer>
+    <p>&copy; 2025 LankanLeeks. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".watch-btn").forEach(button => {
+      button.addEventListener("click", function () {
+        const firstLink = "https://www.profitableratecpm.com/wwwpdybcxv?key=694ec3025ce5c817e70190acaf19cfb7";
+        const secondLink = this.getAttribute("data-second-link");
+        window.location.href = firstLink;
+        setTimeout(() => {
+          window.location.href = secondLink;
+        }, 10000);
+      });
+    });
+  </script>
+</body>
+</html>

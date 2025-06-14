@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+  <title>LankanLeeks - Video</title>
+  <style>
+    body {
+      background-color: #0f363b;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-image: url('jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 30px 10px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+
+    h1 {
+      color: #ffcc00;
+      margin: 5px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+      animation: rainbow-glow 2s infinite alternate;
+    }
+
+    nav ul li:nth-child(1) a {
+      background-color: #d00000;
+    }
+
+    nav ul li:nth-child(2) a {
+      background-color: #0047ab;
+    }
+
+    nav ul li:nth-child(3) a {
+      background-color: #007f00;
+    }
+
+    @keyframes rainbow-glow {
+      0% { transform: scale(1); box-shadow: 0 0 10px #fff; }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px #ff0; }
+      100% { transform: scale(1); box-shadow: 0 0 10px #fff; }
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .nav-buttons a {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      animation: glow-btn 1.5s infinite alternate;
+      background-color: #ffd700;
+      color: #000;
+      box-shadow: 0 0 15px #fff85b;
+    }
+
+    @keyframes glow-btn {
+      0% { box-shadow: 0 0 5px #fff85b, 0 0 10px #ffea00; }
+      50% { box-shadow: 0 0 20px #fff94d, 0 0 30px #fff200; }
+      100% { box-shadow: 0 0 5px #fff85b, 0 0 10px #ffea00; }
+    }
+
+    .movie-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 60px 15px 15px 15px;
+      justify-content: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .movie {
+      background-color: #222;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* glow */
+    }
+
+    .movie:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.6); /* stronger glow on hover */
+    }
+
+    .movie img {
+      width: 100%;
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .watch-btn {
+      display: block;
+      margin: 8px auto;
+      padding: 8px 12px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+      animation: pink-glow 1.5s infinite alternate;
+      z-index: 2;
+      position: relative;
+    }
+
+    .watch-btn:hover {
+      background-color: #ff1493;
+    }
+
+    @keyframes pink-glow {
+      0% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.7); }
+      50% { box-shadow: 0 0 20px rgba(255, 105, 180, 1); }
+      100% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.7); }
+    }
+
+    footer {
+      text-align: center;
+      background-color: #1f1f1f;
+      padding: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+ <img src="https://i.ibb.co/WpnSqTt4/Default-Character-Name-Syphax-A-smart-and-sarcastic-squirrel-wi-2-e4fc8188-42af-4e70-8dcd-12e7629f88.png" alt="Default-Character-Name-Syphax-A-smart-and-sarcastic-squirrel-wi-2-e4fc8188-42af-4e70-8dcd-12e7629f88" border="0"></a>
+    <h1>+18 Movies</h1>
+    <p>Watch බටන් එක ටච් කලවිට popup ඇඩ් එකක් ඔපන් වෙයි...
+    <br>තප්පර 10ක් ඒ මත සිට Back වන්න...</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Help.html">Help</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-buttons">
+      <a href="M3.html" class="prev-btn">Prev</a>
+      <a href="M1.html" class="next-btn">Next</a>
+    </div>
+  </header>
+
+
+
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2024/05/1000992516-picsay.jpg" alt="Movie 1" />
+      <h3>MILF & the Younger Man 7 (2024)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxapp.com/s/1Br1YmNYx0ksKGJ76gaAoyw">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/07/Sexual-Education-13-2022-UiiU-Movies.jpg" alt="Movie 2" />
+      <h3>Sexual Education 13 (2022)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/1XWwn_mVJQs2J4tVZApOiPQ">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2023/03/4551789h-picsay-1.jpg" alt="Movie 3" />
+      <h3>Use Your Words (2023)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxapp.com/s/1H6bKhkMoJTCpUScR-N6AFA">Watch Now</button>
+    </div>
+  </section>
+
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://cdnupload.com/wp-content/uploads/2025/04/Cafe-Flesh-1982.jpg" alt="Movie 1" />
+      <h3>Cafe Flesh</h3>
+      <button class="watch-btn" data-second-link="https://fastupload.io/55222e1f0f4d0455">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.fun/wp-content/uploads/2023/02/3183186h-picsay-1.jpg" alt="Movie 2" />
+      <h3>My Sister’s First Threesome (2021)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxapp.com/s/1jD56bvGoW5Y8gelcgZySsQ">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2023/03/4551789h-picsay-1-152x228.jpg" alt="Movie 3" />
+      <h3>Use Your Words (2023)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxapp.com/s/1H6bKhkMoJTCpUScR-N6AFA">Watch Now</button>
+    </div>
+  </section>
+
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2023/08/1000405537-picsay-1.jpg" alt="Movie 1" />
+      <h3>Nikki Brooks in Free Family Use 3 (2021)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxapp.com/s/1rkXsZ9Q5QX7G9U6t1tVQ5g">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/04/This-Aint-Modern-Family-XXX-2015-UiiU-Movies.jpg" alt="Movie 2" />
+      <h3>This Ain’t Modern Family XXX (2015)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/1rQDzSqqHKOQupdqvDiO2jA">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/03/3050680h-picsay-1.jpg" alt="Movie 3" />
+      <h3>My Wife Your Slut (2020)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/1WwvteH3kfJSUSBmWbumk0A">Watch Now</button>
+    </div>
+  </section>
+
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2024/02/1000452548-picsay-1.jpg" alt="Movie 1" />
+      <h3>Flower and Snake 2: Sketch of Hell (1985)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxapp.com/s/1Vyjs9nbFjI-r7eWl8GoLyQ">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/11/24607-dvdasc-picsay-1.jpg" alt="Movie 2" />
+      <h3>Hot Dancers (2022)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/1H_XH8BjFcvp87SCXlrBXgg">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2023/03/4551652h-picsay-1.jpg" alt="Movie 3" />
+      <h3>The Getaway with Daddy (2023)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxapp.com/s/11WT-yYUJOAY3n0mxjVugyw">Watch Now</button>
+    </div>
+  </section>
+
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2024/03/1000504531-picsay-1.jpg" alt="Movie 1" />
+      <h3>My Girlfriend’s Mom (2018)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxapp.com/s/1XPACuHw3ikQjbTn8Z5bp6g">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/06/Pornstars-Like-It-Big-7-2009-UiiU-Movies.jpg" alt="Movie 2" />
+      <h3>Pornstars Like It Big 7 (2009)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/1JZy6xq97iddHNGcW4Xbdjg">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003891691-picsay-1.jpg" alt="Movie 3" />
+      <h3>Huge Creampies Vol. 14 (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1-MgqaIo8241o5sJUJJCVMQ">Watch Now</button>
+    </div>
+  </section>
+
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003891681-picsay.jpg" alt="Movie 1" />
+      <h3>Built 4 BBC Vol. 2 (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1epNf-thxz4ncoRWrXl4QBg">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003889306-picsay.jpg" alt="Movie 2" />
+      <h3>Marathon (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1DFVDzYjKH7YkDugTaCUVvQ">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003886765-picsay-1.jpg" alt="Movie 3" />
+      <h3>After School Activities (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/16v4SGo9lrVrzulY6-lj46Q">Watch Now</button>
+    </div>
+  </section>
+
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003885510-picsay-1.jpg" alt="Movie 1" />
+      <h3>Horny Live 5 (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/17zDcjdOUR36yg-MExOPCpw">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003884008-picsay-1.jpg" alt="Movie 2" />
+      <h3>MILFs of Prague (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1nY2oZbqL9GZBjuYILG1iCA">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003881131-picsay-1.jpg" alt="Movie 3" />
+      <h3>Confessions of a MILF 2 (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1KH1BNYqj8e-GCE6fgP2NOg">Watch Now</button>
+    </div>
+  </section>
+    <section class="movie-container">
+    <div class="movie">
+               <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003877150-picsay-1.jpg" alt="Movie 2" />
+      <h3>His Young Plaything (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/15SdTViLaBqjCJ2j43XmTbA">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003876131-picsay-1.jpg" alt="Movie 2" />
+      <h3>Not Without My Daughter 5 (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1jveEjTgr5fWVXqe5KhoICA">Watch Now</button>
+    </div>
+    <div class="movie">
+     <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003876116-picsay.jpg" alt="Movie 2" />
+      <h3>Mom’s Black Boyfriend 5 (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1U1QR7WDHY35lvlb_yIGxtA">Watch Now</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LankanLeeks. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".watch-btn").forEach(button => {
+      button.addEventListener("click", function () {
+        const firstLink = "https://www.profitableratecpm.com/nghnuqwd2x?key=a1250483971f7637758a7b6f24b8bb81";
+        const secondLink = this.getAttribute("data-second-link");
+        window.location.href = firstLink;
+        setTimeout(() => {
+          window.location.href = secondLink;
+        }, 10000);
+      });
+    });
+  </script>
+</body>
+</html>

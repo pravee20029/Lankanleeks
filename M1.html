@@ -1,0 +1,360 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+  <title>LankanLeeks - Video</title>
+  <style>
+    body {
+      background-color: #0f363b;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-image: url('jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 30px 10px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+
+    h1 {
+      color: #ffcc00;
+      margin: 5px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+      animation: rainbow-glow 2s infinite alternate;
+    }
+
+    nav ul li:nth-child(1) a {
+      background-color: #d00000;
+    }
+
+    nav ul li:nth-child(2) a {
+      background-color: #0047ab;
+    }
+
+    nav ul li:nth-child(3) a {
+      background-color: #007f00;
+    }
+
+    @keyframes rainbow-glow {
+      0% { transform: scale(1); box-shadow: 0 0 10px #fff; }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px #ff0; }
+      100% { transform: scale(1); box-shadow: 0 0 10px #fff; }
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .nav-buttons a {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      animation: glow-btn 1.5s infinite alternate;
+      background-color: #ffd700;
+      color: #000;
+      box-shadow: 0 0 15px #fff85b;
+    }
+
+    @keyframes glow-btn {
+      0% { box-shadow: 0 0 5px #fff85b, 0 0 10px #ffea00; }
+      50% { box-shadow: 0 0 20px #fff94d, 0 0 30px #fff200; }
+      100% { box-shadow: 0 0 5px #fff85b, 0 0 10px #ffea00; }
+    }
+
+    .movie-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 60px 15px 15px 15px;
+      justify-content: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .movie {
+      background-color: #222;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* glow */
+    }
+
+    .movie:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.6); /* stronger glow on hover */
+    }
+
+    .movie img {
+      width: 100%;
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .watch-btn {
+      display: block;
+      margin: 8px auto;
+      padding: 8px 12px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+      animation: pink-glow 1.5s infinite alternate;
+      z-index: 2;
+      position: relative;
+    }
+
+    .watch-btn:hover {
+      background-color: #ff1493;
+    }
+
+    @keyframes pink-glow {
+      0% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.7); }
+      50% { box-shadow: 0 0 20px rgba(255, 105, 180, 1); }
+      100% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.7); }
+    }
+
+    footer {
+      text-align: center;
+      background-color: #1f1f1f;
+      padding: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+ <img src="https://i.ibb.co/WpnSqTt4/Default-Character-Name-Syphax-A-smart-and-sarcastic-squirrel-wi-2-e4fc8188-42af-4e70-8dcd-12e7629f88.png" alt="Default-Character-Name-Syphax-A-smart-and-sarcastic-squirrel-wi-2-e4fc8188-42af-4e70-8dcd-12e7629f88" border="0"></a>
+    <h1>+18 Movies</h1>
+    <p>Watch බටන් එක ටච් කලවිට popup ඇඩ් එකක් ඔපන් වෙයි...
+    <br>තප්පර 10ක් ඒ මත සිට Back වන්න...</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Help.html">Help</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-buttons">
+      <a href="M2.html" class="prev-btn">Prev</a>
+      <a href="Help.html" class="Help-btn">Help</a>
+    </div>
+  </header>
+
+
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003758819-picsay-1.jpg" alt="Movie 1" />
+      <h3>Second Skin (1999)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1J0tqZg5uG3u0jfOJxYfXOQ">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/12/tPDe68PDsgIGMs6wdJLtcwVVxA7.jpg" alt="Movie 2" />
+      <h3>The Perfection (2018)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/1_OEN1HwyGzv3NoZTubpmNg">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2024/04/1000941411-picsay-1.jpg" alt="Movie 3" />
+      <h3>Hard Breakers (2011)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxapp.com/s/1LTk34a7pqv8kEyX6kbm8Qg">Watch Now</button>
+    </div>
+  </section>
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2023/01/q48YCkcEgMls7G6DnTp4GG0fgKm-2.jpg" alt="Movie 1" />
+      <h3>Jack’s Teen America: Mission 22 (2008)</h3>
+      <button class="watch-btn" data-second-link="https://momerybox.com/s/1DmMTF14u8suWysmOSe3J4w">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/08/Howl-of-the-Devil-1988-UiiU-Movies.jpg" alt="Movie 2" />
+      <h3>Howl of the Devil (1988)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/1wDPC3rUc0esgSPzWkysOdQ">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/04/1003698912-picsay-1.jpg" alt="Movie 3" />
+      <h3>Spritzende Colts (1991)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1Klw0_ayPV5xo9HGAUbOxFA">Watch Now</button>
+    </div>
+  </section>
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/05/Half-His-Age-A-Teenage-Tragedy-2017-UiiU-Movies.jpg" alt="Movie 1" />
+      <h3>Half His Age: A Teenage Tragedy (2017)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/1aOjbCWQn1xYAHa2LsEcP5Q">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/02/1003096176-picsay-1.jpg" alt="Movie 2" />
+      <h3>Diana Gabrovska Wedding Orgy (2024)</h3>
+      <button class="watch-btn" data-second-link="https://1024terabox.com/s/1-yx6jUHyBOJnWPHYkPBQfA">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/10/images48-picsay-1.jpg" alt="Movie 3" />
+      <h3>Snapdragon (1993)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/1_oR_9-Sp1YCyt-idB-_wog">Watch Now</button>
+    </div>
+  </section>
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/04/Jersey-Shore-Massacre-2014-UiiU-Movies.jpg" alt="Movie 1" />
+      <h3>Jersey Shore Massacre (2014)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/19497_e1NQsclt1pIyvQnww">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/06/La-Mule-2022-UiiU-Movies.jpg" alt="Movie 2" />
+      <h3>La Mule (2022)</h3>
+      <button class="watch-btn" data-second-link="https://terabox.com/s/1ZPwopu2_s39etWnv4THIIg">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003775367-picsay-1.jpg" alt="Movie 3" />
+      <h3>Grease XXX: A Parody (2013)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxlink.com/s/1EjblR47YfFqqK4Ab7ouU4Q">Watch Now</button>
+    </div>
+  </section>
+
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003775360-picsay-1.jpg" alt="Movie 1" />
+      <h3>Couture No. 2 (2025)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxlink.com/s/100vYfIoZ2IheTs0bupn6Yw">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003773091-picsay-1.jpg" alt="Movie 2" />
+      <h3>Terrifier 2 (2022)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxlink.com/s/1kc42Jlu3Lr0hFCeN5idhmg">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2022/06/Blonde-Label-2-2022-UiiU-Movies.jpg" alt="Movie 3" />
+      <h3>Blonde Label 2 (2022)</h3>
+      <button class="watch-btn" data-second-link="https://teraboxlink.com/s/1t9p9xp7JJ8GHkSMmxaHS5Q">Watch Now</button>
+    </div>
+  </section>
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003771682-picsay-1.jpg" alt="Movie 1" />
+      <h3>Blonde Label 4 (2024)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1McDMJlie8DCtvsiux2Jbww">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003768786-picsay-1.jpg" alt="Movie 2" />
+      <h3>Blonde Label 3 (2023)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1vQtG7Tbfvbap9gnVcMkUaA">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003768039-picsay-1.jpg" alt="Movie 3" />
+      <h3>Squirting Hotwives (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1_vtXETc7UpRJOeslsDNwGQ">Watch Now</button>
+    </div>
+  </section>
+
+  <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003766217-picsay-1.jpg" alt="Movie 1" />
+      <h3>Virgin Territory (2007)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1Yly1joYaXSbelt-EcLCcNA">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003762906-picsay-1.jpg" alt="Movie 2" />
+      <h3>BBW Bombshells 2 (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1L4kmt_6z30Rgj6eMyeEKug">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003762897-picsay-1.jpg" alt="Movie 3" />
+      <h3>Daddy’s Little Slut (2022)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1ByPZG8pW1FIsDp3HXkhmXQ">Watch Now</button>
+    </div>
+  </section>
+
+    <section class="movie-container">
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003762892-picsay-1.jpg" alt="Movie 1" />
+      <h3>Racks Vol. 4 (2025)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/14OCibuA0Q0J3NlOOJ4twIg">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003761567-picsay-1.jpg" alt="Movie 2" />
+      <h3>Play Vol. 4 (2023)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1QGqS1gXKuRdz7iOE_iwEyw">Watch Now</button>
+    </div>
+    <div class="movie">
+      <img src="https://uiiumovie.com/wp-content/uploads/2025/05/1003760576-picsay.jpg" alt="Movie 3" />
+      <h3>The Exception (2017)</h3>
+      <button class="watch-btn" data-second-link="https://terafileshare.com/s/1j5GNUZ91WQAn06o02DU1rg">Watch Now</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LankanLeeks. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".watch-btn").forEach(button => {
+      button.addEventListener("click", function () {
+        const firstLink = "https://www.profitableratecpm.com/qythg6ez?key=19878c237e13f7e38ae5137247950d6c";
+        const secondLink = this.getAttribute("data-second-link");
+        window.location.href = firstLink;
+        setTimeout(() => {
+          window.location.href = secondLink;
+        }, 10000);
+      });
+    });
+  </script>
+</body>
+</html>
