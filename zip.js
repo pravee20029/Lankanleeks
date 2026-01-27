@@ -16,7 +16,11 @@ const movies = [
 
 
 
-
+{
+    title: "special",
+    image: "https://i.ibb.co/qbZGM6d/1769525686360-3.jpg",
+    link: "https://sub2unlock.me/sqJY9OF"
+  },
 {
     title: "zip92",
     image: "https://i.ibb.co/HLpcm7M4/In-Shot-20251223-195534147.jpg",
