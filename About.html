@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ====== Global Styles ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url('https://img3.wallspic.com/crops/9/7/6/9/6/169679/169679-nature-wisgoon_social_network-atmosphere-light-world-720x1520.jpg') no-repeat center center/cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+  color: #fff;
+  overflow-x: hidden;
+  animation: backgroundGlow 15s infinite alternate;
+}
+
+/* ====== Background Glow Animation ====== */
+@keyframes backgroundGlow {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.1) contrast(1.1); }
+  100% { filter: brightness(1); }
+}
+
+/* ====== Heading ====== */
+h1 {
+  font-size: 6vw;
+  margin-bottom: 5vh;
+  text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f, 0 0 40px #00f;
+  color: #00ccff;
+  text-align: center;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f, 0 0 40px #00f; }
+  to { text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 50px #00ccff; }
+}
+
+/* ====== Buttons ====== */
+.button {
+  position: relative;
+  display: block;
+  width: 90%;
+  max-width: 700px;
+  background: rgba(10,10,30,0.9);
+  border: 2px solid #00ccff;
+  padding: 1.5rem 2rem;
+  margin: 2vh 0;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff inset;
+  transition: all 0.3s ease;
+  text-align: left;
+  overflow: hidden;
+}
+
+.button i {
+  margin-right: 10px;
+  color: #00ffff;
+}
+
+/* Hover Neon Glow */
+.button:hover {
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #00ccff inset, 0 0 100px #00aaff;
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* ====== Translation ====== */
+.translation {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.translation span {
+  display: block;
+  margin-top: 5px;
+}
+
+/* ====== 3D Effect Overlay ====== */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.3));
+  pointer-events: none;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  h1 { font-size: 8vw; }
+  .button { font-size: 1rem; padding: 1.2rem 1.5rem; }
+  .translation { font-size: 0.8rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 10vw; }
+  .button { font-size: 0.95rem; padding: 1rem 1.2rem; }
+  .translation { font-size: 0.75rem; }
+}
+</style>
+</head>
+<body>
+
+<h1>About</h1>
+
+<button class="button">
+  <i class="fa-solid fa-play"></i>🌟VIDEO - මෙම බටන් එක හරහා ඉස්සර දුන් විඩියො වෙන වෙනම බැලිමට හැක.
+  <div class="translation">
+    <span>English: 🌟VIDEO - You can watch previously released videos separately.</span>
+    <span>Tamil: 🌟VIDEO - முன்பு வெளியிடப்பட்ட வீடியோக்களை தனித்தனியாக பார்க்க முடியும்.</span>
+  </div>
+</button>
+
+<button class="button">
+  <i class="fa-solid fa-file-zipper"></i>🌟VIDEO ZIP - මෙම බටන් එක හරහා පහසුවෙන් විඩියො 25 බැගින් එක පාර ඩවුන්ලොඩ් කිරිමට හෝ නැරඹිමට හැක.
+  <div class="translation">
+    <span>English: 🌟VIDEO ZIP - Easily download or watch 25 videos at once.</span>
+    <span>Tamil: 🌟VIDEO ZIP - 25 வீடியோக்களை ஒரே நேரத்தில் எளிதாக பதிவிறக்கம் அல்லது பார்வையிடலாம்.</span>
+  </div>
+</button>
+
+<button class="button">
+  <i class="fa-solid fa-film"></i>🌟MOVIES - අලුතින් නිකුත් වෙන හෝ සමහර පැරණි Movies රස්තියාදුවකින් තොරව ඩවුන්ලොඩ් කිරිමට හැක.
+  <div class="translation">
+    <span>English: 🌟MOVIES - Download new or selected old movies without hassle.</span>
+    <span>Tamil: 🌟MOVIES - புதிய அல்லது சில பழைய திரைப்படங்களை சிரமமில்லாமல் பதிவிறக்கம் செய்யலாம்.</span>
+  </div>
+</button>
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  <script>(function(s){s.dataset.zone='10358473',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+ 
+  
+  
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LankanLeeks</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0f0f12;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ===== HEADER ===== */
+.top-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px;
+  background:linear-gradient(145deg,#1a1a1f,#0b0b0e);
+  box-shadow:0 10px 30px rgba(0,0,0,.9);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  font-size:36px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  cursor:pointer;
+  background:linear-gradient(90deg,#9aa0ff,#4dd0e1,#9aa0ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 18px rgba(120,140,255,.35);
+}
+
+/* ===== SEARCH ICON ===== */
+.search-icon{
+  font-size:20px;
+  cursor:pointer;
+  color:#ddd;
+}
+
+/* ===== SEARCH BAR ===== */
+.search-box{
+  display:none;
+  padding:12px;
+  background:#0b0b0e;
+  box-shadow:0 10px 25px rgba(0,0,0,.9);
+}
+.search-box.show{
+  display:block;
+}
+.search-box input{
+  width:100%;
+  padding:12px 14px;
+  background:#15151a;
+  border:none;
+  border-radius:12px;
+  color:#fff;
+  outline:none;
+}
+
+/* ===== HERO ===== */
+.hero{
+  margin:16px;
+  padding:18px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#1c1c22,#0a0a0d);
+  box-shadow:0 12px 30px rgba(0,0,0,.9);
+}
+.hero h3{
+  margin-bottom:8px;
+  font-size:20px;
+}
+.hero p{
+  font-size:14px;
+  color:#cfcfcf;
+  line-height:1.6;
+}
+
+/* ===== GRID ===== */
+.movie-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  padding:16px;
+}
+@media (min-width:1024px){
+  .movie-grid{grid-template-columns:repeat(5,1fr)}
+}
+
+@media (min-width:1400px){
+  .movie-grid{grid-template-columns:repeat(6,1fr)}
+}
+.movie-card{
+  border-radius: 14px;
+  border: 2px solid rgba(0, 255, 170, 0.9);
+  box-shadow:
+    0 0 10px rgba(0, 255, 170, 0.6),
+    inset 0 0 10px rgba(0, 255, 170, 0.3);
+}
+
+.movie-card:hover{
+  box-shadow:
+    0 0 22px #00ffaa,
+    0 0 45px rgba(0, 255, 170, 0.9);
+}
+/* ===== CARD ===== */
+.movie-card{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
+  background:#15151a;
+  box-shadow:0 15px 35px rgba(0,0,0,.85);
+  transition:.35s ease;
+}
+.movie-card:hover{
+  transform:translateY(-6px) scale(1.04);
+  box-shadow:0 25px 45px rgba(0,0,0,1);
+}
+.movie-card img{
+  width:100%;
+  aspect-ratio:2/3;
+  object-fit:cover;
+}
+
+/* ===== TITLE ===== */
+.movie-title{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:10px;
+  font-size:14px;
+  text-align:center;
+  background:linear-gradient(to top,rgba(0,0,0,.95),transparent);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* ===== PAGINATION ===== */
+.pagination{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin:20px;
+}
+.pagination button{
+  padding:8px 18px;
+  background:linear-gradient(145deg,#222,#111);
+  border:none;
+  border-radius:10px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* ===== SNOW ===== */
+#snow{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:2000;
+}
+.snowflake{
+  position:absolute;
+  top:-10px;
+  animation:fall linear infinite;
+}
+@keyframes fall{
+  to{transform:translateY(110vh)}
+}
+
+/* ===== FOOTER ===== */
+.site-footer{
+  padding:16px;
+  text-align:center;
+  font-size:13px;
+  color:#888;
+  background:#0b0b0e;
+}
+  
+  /* ===== CLEAN 3D LOGO (3 COLORS – PREMIUM) ===== */
+.logo{
+  font-size:34px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  cursor:pointer;
+
+  /* 3-color smooth gradient */
+  background:linear-gradient(
+    90deg,
+    #ffffff,
+    #b388ff,
+    #4dd0e1
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  /* Soft 3D depth (no ugly glow) */
+  text-shadow:
+    1px 1px 0 rgba(0,0,0,0.35),
+    2px 2px 0 rgba(0,0,0,0.25),
+    3px 3px 6px rgba(0,0,0,0.45);
+
+  transition:0.25s ease;
+}
+
+.logo:hover{
+  transform:translateY(-2px);
+  text-shadow:
+    1px 1px 0 rgba(0,0,0,0.45),
+    3px 3px 8px rgba(0,0,0,0.65);
+}
+  
+  /* ===== 3D MOVIE TITLE ===== */
+.movie-title{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:12px 8px;
+  text-align:center;
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:0.5px;
+
+  /* Center color */
+  color:#ffffff;
+
+  /* 3D outline + depth */
+  text-shadow:
+    1px 1px 0 #ff1493,
+    2px 2px 0 #ff1493,
+    3px 3px 0 #ff1493,
+    4px 4px 6px rgba(255, 215, 0, 0.9),
+    0 0 12px rgba(255, 215, 0, 0.8);
+
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.2),
+    transparent
+  );
+
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+
+  transform:translateZ(0);
+}
+  
+</style>
+</head>
+
+<body>
+
+<div id="snow"></div>
+
+<header class="top-bar">
+  <div class="logo" onclick="goHome()">lankanleeks</div>
+  <i class="fas fa-search search-icon" id="searchToggle"></i>
+</header>
+
+<div class="search-box" id="searchBox">
+  <input type="text" id="searchInput" placeholder="Search movies...">
+</div>
+
+<div class="hero">
+  <h3 id="sectionTitle">Recently Added</h3>
+  <p>
+    🌟ZIP එහෙකින් විඩියො 25ක් බැගින්<br>
+ 🌟 Direct Download සම්පුර්ණයෙන් FREE
+   </p>
+</div>
+
+<div class="movie-grid" id="movieGrid"></div>
+<div class="pagination" id="pagination"></div>
+
+<footer class="site-footer">
+  © 2025 lankanleeks. All rights reserved.
+</footer>
+
+<!-- MOVIE DATA -->
+<script src="zip.js"></script>
+
+<script>
+/* ===== SEARCH TOGGLE ===== */
+searchToggle.onclick = () => {
+  searchBox.classList.toggle("show");
+  searchInput.focus();
+};
+
+/* ===== DATA ===== */
+let all = movies;
+let current = all;
+let page = 1;
+let per = 24;
+
+/* ===== RENDER ===== */
+function render(data){
+  movieGrid.innerHTML='';
+  pagination.innerHTML='';
+
+  let start=(page-1)*per;
+  let end=start+per;
+
+  data.slice(start,end).forEach(m=>{
+    movieGrid.innerHTML+=`
+      <div class="movie-card" onclick="location.href='${m.link}'">
+        <img src="${m.image}" alt="${m.title}">
+        <div class="movie-title">${m.title}</div>
+      </div>
+    `;
+  });
+
+  if(page>1){
+    pagination.innerHTML+=`<button onclick="page--;render(current)">Prev</button>`;
+  }
+  if(end<data.length){
+    pagination.innerHTML+=`<button onclick="page++;render(current)">Next</button>`;
+  }
+}
+
+/* ===== HOME ===== */
+function goHome(){
+  sectionTitle.innerText="Recently Added";
+  current=all;
+  page=1;
+  render(current);
+}
+
+/* ===== SEARCH ===== */
+searchInput.onkeyup = () => {
+  let val = searchInput.value.toLowerCase();
+  current = all.filter(m => m.title.toLowerCase().includes(val));
+  page = 1;
+  render(current);
+};
+
+render(all);
+
+
+</script>
+
+</body>
+</html>
