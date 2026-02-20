@@ -1,11 +1,138 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
+<script>(function(s){s.dataset.zone='10358473',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  
+ <!-- ===== UPDATE POPUP START ===== -->
+<div id="updatePopupOverlay">
+  <div class="updatePopupBox">
+    <span class="closeBtn" onclick="closePopup()">×</span>
+    
+    <h2>🚀 Big Update Coming Soon!</h2>
+    
+    <p class="lang en">
+      A new exciting update is coming very soon. Stay tuned!
+    </p>
 
+    <p class="lang si">
+      ඉතා ඉක්මනින් අලුත් විශේෂ අප්ඩේට් එකක් බලාපොරොත්තු වෙන්න!
+    </p>
+
+    <p class="lang ta">
+      மிக விரைவில் புதிய சிறப்பு அப்டேட் வருகிறது. காத்திருங்கள்!
+    </p>
+
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<style>
+/* Overlay Background */
+#updatePopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Popup Box */
+.updatePopupBox {
+  width: 90%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  transform: perspective(1000px) rotateX(20deg) scale(0.8);
+  animation: popup3D 0.6s ease forwards;
+}
+
+/* Title */
+.updatePopupBox h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+/* Text */
+.updatePopupBox p {
+  font-size: 14px;
+  margin: 8px 0;
+  opacity: 0.9;
+}
+
+/* Button */
+.updatePopupBox button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #00f5ff, #6a00ff);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.updatePopupBox button:hover {
+  transform: scale(1.1);
+}
+
+/* Close Button */
+.closeBtn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Animations */
+@keyframes popup3D {
+  to {
+    transform: perspective(1000px) rotateX(0deg) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media(max-width:480px){
+  .updatePopupBox {
+    padding: 20px;
+  }
+}
+</style>
+
+<script>
+function closePopup() {
+  document.getElementById("updatePopupOverlay").style.display = "none";
+}
+</script>
+<!-- ===== UPDATE POPUP END ===== -->
+ 
+ 
+ 
+ 
+ 
+ 
   
-  
- <script>(function(s){s.dataset.zone='10358473',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-  
+ 
   
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRG1PE6F2S"></script>
@@ -40,7 +167,7 @@
     <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
     <li><a href="file.html"><i class="fa fa-film"></i>Video zip</a></li>
     <li><a href="all.html"><i class="fa fa-lock"></i>Old Video</a></li>
-    <li><a href="https://18movies.netlify.app/"><i class="fa fa-cloud-download"></i>Movies</a></li>
+    <li><a href="Movie18.html"><i class="fa fa-cloud-download"></i>Movies</a></li>
     <li><a href="site.html"><i class="fa fa-book"></i>Top Site</a></li>
     <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
   </ul>
@@ -67,14 +194,14 @@
   <ul class="nav-buttons">
     <li><a href="all.html">OLD VIDEO</a></li>
     <li><a href="file.html">VIDEO ZIP</a></li>
-    <li><a href="https://18movies.netlify.app/">+18 MOVIES</a></li>
+    <li><a href="Movie18.html">+18 MOVIES</a></li>
   </ul>
 
   <div class="second-nav-wrap">
     <ul class="nav-buttons second-nav">
-      <li><a href="https://www.walakathaloke.giize.com/">STORY</a></li>
-      <li><a href="https://xtube123.netlify.app/">XTUBE</a></li>
-      <li><a href="https://cinelanka.netlify.app/">MOVIES</a></li>
+
+      <li><a href="tube.html">XTUBE</a></li>
+
     </ul>
   </div>
 </header>
@@ -85,7 +212,32 @@
 <div style="text-align:center;margin:20px 0;">
   <span id="lastUpdate"></span>
 </div>
+  
+  <div style="display:flex; justify-content:center; align-items:center; min-height:100vh;">
 
+    <a href="new.html" class="electric-movie-card">
+        
+        <img src="https://i.ibb.co/MyZ0tJ2C/In-Shot-20260219-052048079.jpg" class="movie-img">
+
+        <div class="movie-body">
+            <h3 class="movie-title">වැලන්ටයින් ලීක්</h3>
+            <p class="movie-desc">
+                .
+            </p>
+
+            <div class="movie-meta">
+                <span>💾 384.1 mb</span>
+                 <span>Time 32.24</span>
+                <span>👁️ <span id="viewCount"></span></span>
+            </div>
+        </div>
+
+    </a>
+
+</div>
+
+  
+  
   <!-- ===== WEB DETAILS SECTION ===== -->
 <div class="web-details">
   <h3>📡 WEB DETAILS</h3>
@@ -114,121 +266,6 @@
   <button class="copy-button" id="copyBtn">Copy කරගන්න</button>
 </div>
 
-
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>All Banners</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #0d1b2a;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-    }
-
-    .banner-description {
-      margin-top: 40px;
-      font-size: 18px;
-    }
-
-    .banner-frame {
-      margin: 10px auto;
-      padding: 8px;
-      border: 2px solid gold;
-      border-radius: 10px;
-      width: fit-content;
-      animation: glow 2s infinite;
-    }
-
-    @keyframes glow {
-      0% { box-shadow: 0 0 5px #ffc107; }
-      50% { box-shadow: 0 0 15px #ffc107; }
-      100% { box-shadow: 0 0 5px #ffc107; }
-    }
-
-    iframe {
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Lower Banners (5) -->
-  
-
-  <div class="banner-frame">
-    <script type="text/javascript">
-      atOptions = {
-        'key' : 'b46006ab2357847029e8c1cec7bbad99',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b46006ab2357847029e8c1cec7bbad99/invoke.js"></script>
-  </div>
-
-  <div class="banner-frame">
-    <script type="text/javascript">
-      atOptions = {
-        'key' : 'b46006ab2357847029e8c1cec7bbad99',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b46006ab2357847029e8c1cec7bbad99/invoke.js"></script>
-  </div>
-
-  <div class="banner-frame">
-    <script type="text/javascript">
-      atOptions = {
-        'key' : 'b46006ab2357847029e8c1cec7bbad99',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b46006ab2357847029e8c1cec7bbad99/invoke.js"></script>
-  </div>
-
-  <div class="banner-frame">
-    <script type="text/javascript">
-      atOptions = {
-        'key' : 'b46006ab2357847029e8c1cec7bbad99',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b46006ab2357847029e8c1cec7bbad99/invoke.js"></script>
-  </div>
-
-  <div class="banner-frame">
-    <script type="text/javascript">
-      atOptions = {
-        'key' : 'b46006ab2357847029e8c1cec7bbad99',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b46006ab2357847029e8c1cec7bbad99/invoke.js"></script>
-  </div>
-</body>
-</html>
-  
   
 <footer class="glow-footer">
   <p>© 2026 Lankanleeks | All Rights Reserved</p>
