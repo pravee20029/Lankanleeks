@@ -1,3 +1,66 @@
+.electric-movie-card{
+    width:320px;
+    background:#141428;
+    border-radius:14px;
+    overflow:hidden;
+    text-decoration:none;
+    color:#fff;
+    display:block;
+    position:relative;
+    transition:0.4s;
+    box-shadow:0 0 15px #00f2ff40;
+}
+
+/* Electric animated border */
+.electric-movie-card::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:14px;
+    background:linear-gradient(45deg,#00f2ff,#0066ff,#00f2ff);
+    background-size:300%;
+    z-index:-1;
+    animation:electricMove 4s linear infinite;
+}
+
+@keyframes electricMove{
+    0%{background-position:0%}
+    100%{background-position:300%}
+}
+
+.electric-movie-card:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 0 35px #00f2ff;
+}
+
+.movie-img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.movie-body{
+    padding:14px;
+}
+
+.movie-title{
+    color:#00f2ff;
+    margin-bottom:6px;
+}
+
+.movie-desc{
+    font-size:13px;
+    color:#ccc;
+    margin-bottom:10px;
+}
+
+.movie-meta{
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+    color:#aaa;
+}
+
 
 /* ================= PERFORMANCE GLOBAL (UPDATED COLORS) ================= */
 * {

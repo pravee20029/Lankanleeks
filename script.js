@@ -1,3 +1,32 @@
+const START_VIEWS = 871;
+const DAILY_INCREASE = 273;
+
+const viewElement = document.getElementById("viewCount");
+
+// අද දවස
+const today = new Date().toDateString();
+
+// save කරපු data ගන්න
+let savedData = JSON.parse(localStorage.getItem("movieViews"));
+
+if (!savedData) {
+    savedData = {
+        views: START_VIEWS,
+        lastUpdate: today
+    };
+} else {
+    if (savedData.lastUpdate !== today) {
+        savedData.views += DAILY_INCREASE;
+        savedData.lastUpdate = today;
+    }
+}
+
+// save again
+localStorage.setItem("movieViews", JSON.stringify(savedData));
+
+// show on screen
+viewElement.textContent = savedData.views.toLocaleString();
+
 
 // SIDEBAR
 const menu = document.getElementById("menu");
