@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <script>(function(s){s.dataset.zone='9624600',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>video</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+.movie-card{
+  border-radius: 14px;
+  border: 2px solid rgba(0,255,255,0.8);
+  box-shadow:
+    0 0 10px rgba(0,255,255,0.6),
+    inset 0 0 10px rgba(0,255,255,0.3);
+}
+.movie-card:hover{
+  box-shadow:
+    0 0 20px #00ffff,
+    0 0 40px rgba(0,255,255,0.8);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{
+  background:radial-gradient(circle at top,#050b1e,#000);
+  color:#eaeaff;
+  overflow-x:hidden;
+}
+.top-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px 14px;
+  height:180px;
+  background:
+    linear-gradient(to bottom,rgba(0,0,0,0.15),rgba(0,0,0,0.95)),
+    url('https://c4.wallpaperflare.com/wallpaper/367/536/906/anime-anime-girls-vocaloid-hatsune-miku-wallpaper-preview.jpg') no-repeat center;
+  background-size:cover;
+  box-shadow:
+    0 0 30px rgba(0,255,255,0.25),
+    inset 0 -40px 60px rgba(0,0,0,0.9);
+  position:relative;
+  z-index:10;
+}
+.logo{
+  font-size:40px;
+  font-weight:800;
+  cursor:pointer;
+}
+.logo .cine{color:#00ffff;text-shadow:0 0 12px #00ffff;}
+.logo .lanka{color:#ffffff;}
+.header-icons i{font-size:18px;cursor:pointer;}
+.search-box{padding:10px;display:none;}
+.search-box.show{display:block}
+.search-box input{
+  width:100%;
+  padding:12px 14px;
+  background:rgba(10,15,30,0.95);
+  border:1px solid rgba(0,255,255,0.5);
+  border-radius:14px;
+  color:#fff;
+  outline:none;
+  box-shadow:0 0 12px rgba(0,255,255,0.4);
+}
+.search-box input:focus{
+  box-shadow:0 0 10px #00ffff,0 0 22px #00ffff;
+}
+.hero{
+  margin:12px;
+  padding:14px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#0d1b3d,#020617);
+  box-shadow:0 0 25px rgba(0,255,255,0.25);
+}
+.hero h3{color:#00ffff;text-shadow:0 0 10px #00ffff;}
+
+.movie-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  padding:12px;
+}
+@media(min-width:1024px){.movie-grid{grid-template-columns:repeat(5,1fr)}}
+@media(min-width:1400px){.movie-grid{grid-template-columns:repeat(6,1fr)}}
+
+.movie-card{
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  border-radius:12px;
+  transition:.3s;
+  box-shadow:0 0 18px rgba(0,0,0,0.7);
+}
+.movie-card:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 18px #00ffff,0 0 28px rgba(138,43,226,0.8);
+}
+.movie-card img{width:100%;aspect-ratio:2/3;object-fit:cover;}
+.pagination{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin:16px;
+}
+.pagination button{
+  padding:6px 14px;
+  background:linear-gradient(145deg,#0c1f3d,#040a18);
+  border:1px solid rgba(0,255,255,0.4);
+  border-radius:6px;
+  color:#fff;
+}
+#snow{position:fixed;inset:0;pointer-events:none;z-index:2000;}
+.site-footer{padding:14px;text-align:center;font-size:13px;color:#8fbfff;}
+</style>
+</head>
+
+<body>
+
+<div id="snow"></div>
+
+<header class="top-bar">
+  <div class="logo" onclick="goHome()">
+    <span class="cine">+18 </span>
+    <span class="lanka">video clip</span>
+  </div>
+  <div class="header-icons">
+    <i class="fas fa-search" id="searchToggle"></i>
+  </div>
+</header>
+
+<div class="search-box" id="searchBox">
+  <input id="searchInput" placeholder="Search movie...">
+</div>
+
+<div class="hero">
+  <h3 id="sectionTitle">Recently Added</h3>
+  <p>🌟Easily download directly from one place.</p>
+</div>
+
+<div class="movie-grid" id="movieGrid"></div>
+<div class="pagination" id="pagination"></div>
+
+<footer class="site-footer">© 2026 lankanleeks. All rights reserved.</footer>
+
+<script src="script.js"></script>
+
+<script>
+let current = movies, page = 1, per = 30;
+
+movies.sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));
+
+const movieGrid = document.getElementById("movieGrid");
+const pagination = document.getElementById("pagination");
+const sectionTitle = document.getElementById("sectionTitle");
+const searchBox = document.getElementById("searchBox");
+const searchInput = document.getElementById("searchInput");
+const searchToggle = document.getElementById("searchToggle");
+
+function render(data){
+  movieGrid.innerHTML = '';
+  pagination.innerHTML = '';
+  let start = (page-1)*per;
+  data.slice(start,start+per).forEach(m=>{
+    movieGrid.innerHTML += `
+      <div class="movie-card" onclick="location.href='${m.link}'">
+        <img src="${m.image}">
+      </div>
+    `;
+  });
+  if(page>1) pagination.innerHTML += `<button onclick="page--;render(current)">Prev</button>`;
+  if(start+per<data.length) pagination.innerHTML += `<button onclick="page++;render(current)">Next</button>`;
+}
+
+function goHome(){
+  sectionTitle.innerText="Recently Added"; 
+  current = movies; 
+  page = 1; 
+  render(current);
+}
+
+searchToggle.onclick = () => {
+  searchBox.classList.toggle("show");
+  searchInput.focus();
+}
+
+searchInput.onkeyup = () => {
+  let v = searchInput.value.toLowerCase();
+  current = movies.filter(x => x.title.toLowerCase().includes(v));
+  page = 1;
+  render(current);
+}
+
+render(movies);
+window.addEventListener("load",()=>searchBox.classList.add("show"));
+</script>
+
+</body>
+</html>
