@@ -14,7 +14,7 @@ body{
   color:white;
   background:
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1500&q=80');
+    url('https://applescoop.org/image/wallpapers/iphone/black-and-white-angel-line-art-angels-31-10-2024-1730358110-hd-wallpaper.webp');
   background-size:cover;
   background-position:center;
   background-attachment:fixed;
@@ -136,18 +136,41 @@ section p{
   line-height:1.5;
 }
 
-/* FOOTER */
 footer{
-  width:100%;
+  width:90%;
+  max-width:600px;
+  margin:5vh auto;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(10px);
-  padding:3vh 1.5vw;
-  border-top:1px solid rgba(255,255,255,0.1);
-  box-sizing:border-box;
+
+  padding:3vh 2vw;
+  border-radius:25px;
+
+  /* IMAGE + DARK OVERLAY */
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+    url('https://c4.wallpaperflare.com/wallpaper/771/83/608/anime-girls-black-background-dark-background-simple-background-selective-coloring-hd-wallpaper-preview.jpg');
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  /* GLASS EFFECT */
+  backdrop-filter:blur(15px) saturate(180%);
+  -webkit-backdrop-filter:blur(15px) saturate(180%);
+
+  border:1px solid rgba(255,255,255,0.25);
+
+  /* ICE / GLOW */
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.9),
+    inset 0 0 20px rgba(255,255,255,0.15),
+    0 0 20px rgba(0,255,255,0.3);
+
+  position:relative;
+  overflow:hidden;
 }
 
 footer img{
@@ -184,7 +207,35 @@ footer img{
   opacity:0.6;
   text-align:center;
 }
+section h2{
+  font-size:5vw;
 
+  color:#fff;
+  animation:colorGlow 4s infinite;
+}
+
+@keyframes colorGlow{
+  0%{
+    color:#00f5ff;
+    text-shadow:0 0 10px #00f5ff;
+  }
+  25%{
+    color:#ff00cc;
+    text-shadow:0 0 10px #ff00cc;
+  }
+  50%{
+    color:#00ff88;
+    text-shadow:0 0 10px #00ff88;
+  }
+  75%{
+    color:#ffaa00;
+    text-shadow:0 0 10px #ffaa00;
+  }
+  100%{
+    color:#00f5ff;
+    text-shadow:0 0 10px #00f5ff;
+  }
+}
 /* TOP BUTTON */
 #topBtn{
   position:fixed;
@@ -275,13 +326,13 @@ header {
 </style>
 
 <section>
-  <h2>🔥 Welcome to LankanLeeks</h2>
-  <p>අලුත් පරන ලීක් වීඩියෝ +18 Movie Free download</p>
+  <h2> Welcome to LankanLeeks</h2>
+  <p>ලීක් විඩියෝ හා +18 movies ඩව්න්ලොඩ් කරගන්න අපහා එක් වන්න</p>
 </section>
 
 <section id="about">
   <h2>About</h2>
-  <p>Movies & Videos platform</p>
+  <p>විඩියෝ හෝ movies ඩව්න්ලොඩ් කරන විට ඇඩ් page වලට ගියහොත් back නැවත උස්සහ කරන්න ! ඇඩ් අවමයි</p>
 </section>
 
 <section id="contact">
