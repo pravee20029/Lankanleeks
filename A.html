@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lankanleeks</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+
+  background: linear-gradient(270deg,#001a33,#000814,#002b5c);
+  background-size: 400% 400%;
+  animation: bgShift 15s ease infinite;
+}
+
+@keyframes bgShift {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+/* ===== GLASS ===== */
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,255,255,0.2);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* ===== TITLE ===== */
+h1 {
+  font-size: 30px;
+  padding: 12px;
+}
+
+/* ===== BUTTONS ===== */
+.multicolor-button-grid {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px;
+}
+
+.color-btn {
+  padding: 14px 22px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,255,255,0.25);
+
+  transition: 0.25s;
+}
+
+.color-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px #00c2ff;
+}
+
+/* ===== COPY ===== */
+.copy-bar {
+  margin: 20px auto;
+  max-width: 550px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(0,255,255,0.2);
+}
+
+.copy-button {
+  background: rgba(0,255,255,0.2);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+}
+
+.copy-button.done {
+  background: #00ff88;
+}
+
+/* ===== SEARCH ===== */
+.search-box {
+  width: 240px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,255,0.25);
+  outline: none;
+  color: white;
+
+  background: rgba(255,255,255,0.05);
+}
+
+/* ===== PAGE GRID ===== */
+.number-button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.num-btn {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,255,0.25);
+
+  transition: 0.2s;
+}
+
+.num-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px #00c2ff;
+}
+
+.num-btn.active {
+  background: rgba(0,255,150,0.3);
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00ff88;
+  padding: 10px 18px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: 0.3s;
+}
+.toast.show {opacity:1;}
+</style>
+
+</head>
+
+<body>
+
+<h1 class="glass">LANKANLEEKS.MY</h1>
+
+<!-- TOP BUTTONS -->
+<div class="multicolor-button-grid">
+  <a href="index.html" class="color-btn">HOME</a>
+  <a href="movie18.html" class="color-btn">+18</a>
+  <a href="5.html" class="color-btn">LAST</a>
+</div>
+
+<!-- COPY -->
+<div class="copy-bar">
+  <span id="copyText">lankanleeks.my</span>
+  <button onclick="copyLink()" id="copyBtn" class="copy-button">Copy</button>
+</div>
+
+<div id="toast" class="toast">Copied ✓</div>
+
+<!-- SEARCH -->
+<input type="text" id="search" class="search-box" placeholder="Search page...">
+
+<h2>PAGE COLLECTION</h2>
+
+<div id="pages" class="number-button-grid"></div>
+
+<script>
+// GENERATE LINKS
+const pagesDiv = document.getElementById("pages");
+
+for(let i=1;i<=5;i++){
+  pagesDiv.innerHTML += `<a class="num-btn" href="${i}.html">${i}</a>`;
+}
+
+// ACTIVE PAGE
+const current = location.pathname.split("/").pop();
+
+document.querySelectorAll(".num-btn").forEach(btn=>{
+  if(btn.getAttribute("href") === current){
+    btn.classList.add("active");
+  }
+});
+
+// COPY
+function copyLink(){
+  const text = document.getElementById("copyText").innerText;
+  const btn = document.getElementById("copyBtn");
+  const toast = document.getElementById("toast");
+
+  navigator.clipboard.writeText(text);
+
+  btn.innerText="Done ✓";
+  btn.classList.add("done");
+  toast.classList.add("show");
+
+  setTimeout(()=>{
+    btn.innerText="Copy";
+    btn.classList.remove("done");
+    toast.classList.remove("show");
+  },1500);
+}
+
+// SEARCH FILTER
+document.getElementById("search").onkeyup = function(){
+  let val = this.value;
+  document.querySelectorAll(".num-btn").forEach(btn=>{
+    btn.style.display = btn.innerText.includes(val) ? "flex" : "none";
+  });
+};
+</script>
+
+</body>
+</html>
