@@ -3,15 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LankanLeeks 3D Responsive</title>
+<title>lankanleaks</title>
+
+<!-- Sinhala Font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Orbitron -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 
 <style>
+
 /* BODY */
 body{
   margin:0;
-  font-family:sans-serif;
+  font-family:'Noto Sans Sinhala', sans-serif;
   color:white;
+  letter-spacing:1px;
   background:
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
     url('https://applescoop.org/image/wallpapers/iphone/black-and-white-angel-line-art-angels-31-10-2024-1730358110-hd-wallpaper.webp');
@@ -21,7 +28,7 @@ body{
   overflow-x:hidden;
 }
 
-/* HEADER - GLASS EFFECT */
+/* HEADER */
 header{
   margin:2vh auto;
   width:90%;
@@ -29,7 +36,13 @@ header{
   padding:2vh 1.5vw;
   text-align:center;
   border-radius:20px;
-  background:rgba(255,255,255,0.05);
+  
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: url('https://i.pinimg.com/originals/20/51/ac/2051acd3692b4befb5e6b4834d8b7be3.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   backdrop-filter:blur(15px) saturate(180%);
   border:1px solid rgba(255,255,255,0.2);
   box-shadow:0 10px 30px rgba(0,0,0,0.8);
@@ -37,7 +50,7 @@ header{
   position:relative;
 }
 
-/* HEADER LIGHT REFLECTION */
+/* HEADER LIGHT */
 header::before{
   content:'';
   position:absolute;
@@ -47,28 +60,23 @@ header::before{
   height:50%;
   border-radius:20px;
   background:linear-gradient(to bottom,rgba(255,255,255,0.2),transparent);
-  pointer-events:none;
 }
 
 /* LOGO */
 header img{
   width:12vw;
   max-width:70px;
-  height:auto;
-  margin-bottom:1vh;
   filter:drop-shadow(0 0 10px #00f5ff);
 }
 
-/* HEADER TITLE */
+/* TITLE */
 header h1{
-  font-family:'Orbitron', sans-serif;
+  font-family:'Orbitron','Noto Sans Sinhala', sans-serif;
   font-size:4vw;
-  max-font-size:28px;
   background:linear-gradient(45deg,#00f5ff,#ff00cc,#00ff88);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   animation:glow 4s infinite linear;
-  margin:0.5vh 0;
 }
 
 @keyframes glow{
@@ -76,7 +84,7 @@ header h1{
   50%{opacity:1;}
 }
 
-/* NAV BUTTONS */
+/* NAV */
 .nav-buttons{
   display:flex;
   flex-wrap:wrap;
@@ -95,10 +103,9 @@ header h1{
   border:1px solid rgba(255,255,255,0.2);
   transition:0.3s;
   font-size:3vw;
-  max-font-size:16px;
 }
 
-/* VIDEO & MOVIE HIGHLIGHT */
+/* VIDEO + MOVIE */
 .nav-buttons a:nth-child(4),
 .nav-buttons a:nth-child(5){
   border-color:#ff0000;
@@ -113,7 +120,6 @@ header h1{
 
 .nav-buttons a:hover{
   transform:translateY(-3px) scale(1.05);
-  box-shadow:0 0 12px currentColor;
 }
 
 /* SECTIONS */
@@ -124,118 +130,68 @@ section{
 
 section h2{
   font-size:5vw;
-  max-font-size:28px;
-  margin-bottom:1vh;
-  color:#00f5ff;
-  text-shadow:0 0 10px #00f5ff;
+  animation:colorGlow 4s infinite;
 }
 
+/* Sinhala text box feel */
 section p{
+  font-weight:600;
+  letter-spacing:1.5px;
   font-size:3.5vw;
-  max-font-size:16px;
-  line-height:1.5;
+  line-height:1.6;
 }
 
+@keyframes colorGlow{
+  0%{color:#00f5ff;}
+  25%{color:#ff00cc;}
+  50%{color:#00ff88;}
+  75%{color:#ffaa00;}
+  100%{color:#00f5ff;}
+}
+
+/* FOOTER */
 footer{
   width:90%;
   max-width:600px;
   margin:5vh auto;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-
   padding:3vh 2vw;
   border-radius:25px;
 
-  /* IMAGE + DARK OVERLAY */
   background:
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
     url('https://c4.wallpaperflare.com/wallpaper/771/83/608/anime-girls-black-background-dark-background-simple-background-selective-coloring-hd-wallpaper-preview.jpg');
 
   background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-
-  /* GLASS EFFECT */
-  backdrop-filter:blur(15px) saturate(180%);
-  -webkit-backdrop-filter:blur(15px) saturate(180%);
-
+  backdrop-filter:blur(15px);
   border:1px solid rgba(255,255,255,0.25);
+  box-shadow:0 0 20px rgba(0,255,255,0.3);
 
-  /* ICE / GLOW */
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.9),
-    inset 0 0 20px rgba(255,255,255,0.15),
-    0 0 20px rgba(0,255,255,0.3);
-
-  position:relative;
-  overflow:hidden;
+  text-align:center;
 }
 
 footer img{
   width:10vw;
   max-width:50px;
-  height:auto;
   filter:drop-shadow(0 0 10px #00f5ff);
-  margin-bottom:1vh;
 }
 
 .footer-links{
   display:flex;
-  flex-wrap:wrap;
   justify-content:center;
   gap:3vw;
-  margin-bottom:1vh;
 }
 
 .footer-links a{
   color:#aaa;
   text-decoration:none;
   font-size:3.5vw;
-  max-font-size:14px;
-  transition:0.3s;
-}
-
-.footer-links a:hover{
-  color:white;
 }
 
 .copy{
   font-size:3vw;
-  max-font-size:13px;
   opacity:0.6;
-  text-align:center;
-}
-section h2{
-  font-size:5vw;
-
-  color:#fff;
-  animation:colorGlow 4s infinite;
 }
 
-@keyframes colorGlow{
-  0%{
-    color:#00f5ff;
-    text-shadow:0 0 10px #00f5ff;
-  }
-  25%{
-    color:#ff00cc;
-    text-shadow:0 0 10px #ff00cc;
-  }
-  50%{
-    color:#00ff88;
-    text-shadow:0 0 10px #00ff88;
-  }
-  75%{
-    color:#ffaa00;
-    text-shadow:0 0 10px #ffaa00;
-  }
-  100%{
-    color:#00f5ff;
-    text-shadow:0 0 10px #00f5ff;
-  }
-}
 /* TOP BUTTON */
 #topBtn{
   position:fixed;
@@ -247,86 +203,28 @@ section h2{
   border-radius:50%;
   background:#00f5ff;
   cursor:pointer;
-  transition:0.3s;
-}
-#topBtn:hover{
-  background:#fff;
-  color:#00f5ff;
 }
 
-/* RESPONSIVE ADJUSTMENTS */
-@media(max-width:600px){
-  header h1{font-size:6vw;}
-  header img{width:18vw; max-width:60px;}
-  .nav-buttons a{font-size:4vw; padding:1vh 2vw;}
-  section h2{font-size:7vw;}
-  section p{font-size:4vw;}
-  footer img{width:15vw;}
-  .footer-links a{font-size:4vw;}
-  .copy{font-size:4vw;}
-}
 </style>
 </head>
+
 <body>
 
 <header id="home">
-  <img src="https://i.ibb.co/Z6LKnqjq/20260108-210355-removebg-preview.png" alt="Logo">
+  <img src="https://i.ibb.co/Z6LKnqjq/20260108-210355-removebg-preview.png">
   <h1>LANKANLEEKS</h1>
 
   <div class="nav-buttons">
     <a href="#home">HOME</a>
     <a href="#about">ABOUT</a>
     <a href="#contact">CONTACT</a>
-    <a href="video.html">VIDEO</a>
+    <a href="all.html">VIDEO</a>
     <a href="Movie18.html">MOVIE</a>
   </div>
 </header>
 
-<style>
-/* HEADER - GIF BACKGROUND + GLASS EFFECT */
-header{
-  margin:2vh auto;
-  width:90%;
-  max-width:600px;
-  padding:2vh 1.5vw;
-  text-align:center;
-  border-radius:20px;
-  background:
-    rgba(255,255,255,0.1),
-    url('https://i.sstatic.net/5N5vh.gif') center/cover no-repeat;
-  backdrop-filter:blur(15px) saturate(180%);
-  border:1px solid rgba(255,255,255,0.2);
-  box-shadow:0 10px 30px rgba(0,0,0,0.8);
-  transform:perspective(800px) rotateX(5deg);
-  position:relative;
-}
-header {
-  margin: 2vh auto;
-  width: 90%;
-  max-width: 600px;
-  padding: 2vh 1.5vw;
-  text-align: center;
-  border-radius: 20px;
-  
-  /* Glass effect background */
-  background-color: rgba(255, 255, 255, 0.1);
-  
-  /* GIF background */
-  background-image: url('https://i.sstatic.net/5N5vh.gif');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  backdrop-filter: blur(15px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-  transform: perspective(800px) rotateX(5deg);
-  position: relative;
-}
-</style>
-
 <section>
-  <h2> Welcome to LankanLeeks</h2>
+  <h2>Welcome to LankanLeeks</h2>
   <p>ලීක් විඩියෝ හා +18 movies ඩව්න්ලොඩ් කරගන්න අපහා එක් වන්න</p>
 </section>
 
@@ -341,7 +239,7 @@ header {
 </section>
 
 <footer>
-  <img src="https://i.ibb.co/Z6LKnqjq/20260108-210355-removebg-preview.png" alt="Logo">
+  <img src="https://i.ibb.co/Z6LKnqjq/20260108-210355-removebg-preview.png">
   <div class="footer-links">
     <a href="#home">Home</a>
     <a href="#about">About</a>
