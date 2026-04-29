@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
-
+<script src="ads.js"></script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Lankanleeks</title>
@@ -165,7 +165,7 @@ h1 {
 <div class="multicolor-button-grid">
   <a href="index.html" class="color-btn">HOME</a>
   <a href="movie18.html" class="color-btn">+18</a>
-  <a href="5.html" class="color-btn">LAST</a>
+  <a href="10.html" class="color-btn">LAST</a>
 </div>
 
 <!-- COPY -->
@@ -187,7 +187,7 @@ h1 {
 // GENERATE LINKS
 const pagesDiv = document.getElementById("pages");
 
-for(let i=1;i<=5;i++){
+for(let i=1;i<=10;i++){
   pagesDiv.innerHTML += `<a class="num-btn" href="${i}.html">${i}</a>`;
 }
 
